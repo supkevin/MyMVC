@@ -13,18 +13,24 @@ namespace MyMVC.Controllers
         //{
         //    return View();
         //}
-        public string Index()
-        {
-            return "這是預設Action";
-        }
+        //public string Index()
+        //{
+        //    return "這是預設Action";
+        //}
 
         //public string Welcome(string name,int age=18)//傳遞參數
         //{
         //    return HttpUtility.HtmlEncode("你好" + name + ",年紀:" + age);
         //}
-        public string Welcome(string name, int id = 18)//傳遞參數
+        public ActionResult Welcome(string name, int numTimes = 1)//傳遞參數
         {
-            return HttpUtility.HtmlEncode("你好" + name + ",id:" + id);
+            ViewBag.Message = "你好!" + name;
+            ViewBag.NumTimes = numTimes;
+            return View();
+        }
+        public ActionResult Index()//回傳view
+        {
+            return View();
         }
     }
 }
