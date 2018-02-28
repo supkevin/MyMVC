@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Test", "ModelBinder"))
+{
+    <div><span>總計:</span>
+    @Html.TextBox("amount")
+    </div>
+    <input type="submit" value="確定" />
+}
+

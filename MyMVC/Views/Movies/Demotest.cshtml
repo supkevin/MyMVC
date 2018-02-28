@@ -1,0 +1,16 @@
+﻿@using MyMVC.Models
+@model IEnumerable<Movie>
+
+@{
+    ViewBag.Title = "Demotest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Demotest</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Title</li>
+    }
+</ul>
+
